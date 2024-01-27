@@ -52,7 +52,7 @@ Note: Ensure that the corect Conda environment with the necessary dependencies i
 
 4) Execute the contents of the notebook
 
-Note: The code has been tested only for Gaussian16, but the ACME package (link) allows for generation of ORCA input files (please see ACME instructions manual). Parameter for the file preparations are set by default based on our recommendations, however these can be easily changed in the "Define Parameters for QM input file generation" cell. Currently, the triplet energy predictions has been benchmarked for the default desttings. Any changes in basis set and functional will require empirical determination of the population cutoff (see DcTEProc for details) for accurate predictions of tripet energies.
+Note: The code has been tested only for Gaussian16, but the ACME package (link) allows for generation of ORCA input files (please see ACME instructions manual). Parameter for the file preparations are set by default based on our recommendations, however these can be easily changed in the "Define Parameters for QM input file generation" cell. Currently, the triplet energy predictions has been benchmarked for the default desttings. Any changes in basis set and functional will require empirical determination of the population cutoff (see DcTEProc for details) for accurate predictions of triplet energies.
 
 Current Recommendations:
 ```
