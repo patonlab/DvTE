@@ -20,7 +20,9 @@ Description: This Jupyter Notebook proceses the inputed quasicaliscal molecular 
 
 1) Install Necessary Dependencies
 
-     pip install [...]
+
+```bash
+$ pip install acme
 
 ## Dynamic Vertical Triplet Energy Processor (DvTEProc)
 
