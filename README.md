@@ -25,11 +25,12 @@ The code is currently designed to work with the Gaussian16 environment with plan
 ## Example Workflow
 
 1) Run the necessary quasiclassical molecular dynamics trajectories.
+
        Code has been deveoped mainly for use with MILO, however any trajectory file is compatible. Currenetly, MILO and JProgDyn have confirmed to be supported.
        Recommendations: 25 Trajectories, 1000 fs simulation lenght, 1 fs times step
    
-2) Generate QM input files using DvTEGen (see above for instructions)
+3) Generate QM input files using DvTEGen (see above for instructions)
 
-3) Execute QM calculations on your local HPC resources
+4) Execute QM calculations on your local HPC resources
 
-4) Analyse the data using DvTEProc (see bove for instructions) for triplet energy prediction and other visualizations
+5) Analyse the data using DvTEProc (see bove for instructions) for triplet energy prediction and other visualizations
