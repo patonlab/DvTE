@@ -100,6 +100,7 @@ $ pip install sklearn
 ```bash
 $ jupyter notebook DvTEGen.ipynb
 ```
+Note: Ensure that the corect Conda environment with the necessary dependencies is opened before the notebook is opened
 
 4) Execute the contents of the notebook
   a) Provide the Path(s) and structure name(s) of the files to be analyzed
