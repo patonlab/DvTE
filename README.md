@@ -23,8 +23,7 @@ Description: This Jupyter Notebook proceses the inputed quasicaliscal molecular 
 
 ```bash
 $ pip install acme
-
-```text
+```
 
 
 
