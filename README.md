@@ -119,3 +119,15 @@ NOTE: As mentioned prior, this value is empirically determined and currently the
 5) Execute QM calculations on your local HPC resources
 
 6) Analyse the data using DvTEProc (see bove for instructions) for triplet energy prediction and other visualizations
+
+
+## (Re)Benchmarking set
+
+The compiled DvTEs dataset of 20 molecules repoted in the preprint (link) at the M06-2X/6-31G(d)//M06-2X/MIDI! is available in the /Benchmarking folder together with an additional notebook called Dynamic Vertical Triplet Energy Benchmarking (DvTEBench). This code utilises the compiled .csv dataset of vertical triplet energies generated using DvTEProc (i.e. {MoleculeName}_output.csv) and collects predicted triplet energies using a range of populations starting from 0.001 to 0.050 in steps of 0.001. The code then compare diffrent models against epxerimentally determined triplet energy values and reports the best population to be used for future predictions. Aditionally, the code can also compare the performance of Guassian Mixture Models (GMMs) instead of simple normal distributions
+
+This set can be utilised to bechmark other level of theory and different flavours of MD simulations (e.g. force fields, semi-empirical, ML-potentials) for the determination of the population cutoff. If you have benchmarking with any addiional level of theory, please reach out and we will include it in the list below.
+
+Currently available benchmarking data:
+
+    M06-2X/6-31(G)//M06-2X/MIDI! - (quasiclassical MD) : population = 0.008
+
