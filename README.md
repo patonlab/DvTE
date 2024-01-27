@@ -16,7 +16,8 @@ The code is currently designed to work with the Gaussian16 environment with plan
 
 ## Dynamic Vertical Triplet Energy Generation (DvTEGen)
 
-Description: This Jupyter Notebook proceses the inputed quasicaliscal molecular dynamics simulations to generate inpute files for vertical triplet energies for a selected number of frames.
+Description: This Jupyter Notebook proceses the inputed quasicaliscal molecular dynamics simulations to generate inpute files for vertical triplet energies for a selected number of frames using the ACME package (link).
+
 Instructions:
 
 1) Files Preparation:
@@ -39,10 +40,29 @@ Note: the dynamics should be performed on the ground state surface (i.e. S0, mul
 ```bash
 $ pip install acme
 ```
-3) Download and excecute jupyter notebook in working directory containing the 
+3) Download and open the jupyter notebook in working directory containing the all the trajectory files
 
- Following the instruction in the notebook, the necessary QM input files will be generated based on the ACME package. The code has been tested only for Gaussian16, but the ACME package (link) allows for generation of ORCA input files (please see ACME instructions manual). An overview of the necessary steps is described below:
+```bash
+$ jupyter notebook DvTEGen.ipynb
+```
+Note: Ensure that the corect Conda environment with the necessary dependencies is opened before the notebook is opened
 
+4) Execute the contents of the notebook
+
+Note: The code has been tested only for Gaussian16, but the ACME package (link) allows for generation of ORCA input files (please see ACME instructions manual). Parameter for the file preparations are set by default based on our recommendations, however these can be easily changed in the "Define Parameters for QM input file generation" cell. Currently, the triplet energy predictions has been benchmarked for the default desttings. Any changes in basis set and functional will require empirical determination of the population cutoff (see DcTEProc for details) for accurate predictions of tripet energies.
+
+Current Recommendations:
+```
+#Step Number for Coordinate Extraction
+step_size = 8 #Step size for trajectory sampling (Default = 8)
+i_step = 1 #First Step in the sampled trajectories (Default = 1)
+f_step = 1000 #Final Step in the sampled trajectories (Default = 1000)
+#QM inputs
+qm_input='m062x/6-31G* scf=xqc' #Level of theory for vertical Triplet Enegy calculations
+program='gaussian' #Program used for QM calculations (Options: gaussian and orca)
+mem='64GB' #Memory used (See ACME specifications)
+nprocs=32 #Number of processors (See ACME specifications)
+```
 
 
 ## Dynamic Vertical Triplet Energy Processor (DvTEProc)
