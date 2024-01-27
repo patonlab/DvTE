@@ -16,14 +16,31 @@ The code is currently designed to work with the Gaussian16 environment with plan
 
 ## Dynamic Vertical Triplet Energy Generation (DvTEGen)
 
-Description: This Jupyter Notebook proceses the inputed quasicaliscal molecular dynamics simulations to generate inpute files for vertical triplet energies for a selected number of frames. The code works with any trajectory file, however testing has been mainly performed using the MILO package developed by the Ess group which is interfaced with Guassian16. This workflow can be form of MD simulations such as force fields, semiempirical methods (e.g. GNF2-xTB) and Density Functional Theory (DFT) as well as other methods. Currenly benchmaking has only performed usign quasiclassical MD at the M06-2X/MIDI! level of theory and an empirical cutoff population is currenly only available for this specific level of thory. Any change in level of theory will require empirical determination of the population cutoff for triplet energy analysis. Following the instruction in the notebook, the necessary QM input files will be generated based on the ACME package. The code has been tested only for Gaussian16, but the ACME package (link) allows for generation of ORCA input files (please see ACME instructions manual). An overview of the necessary steps is described below:
+Description: This Jupyter Notebook proceses the inputed quasicaliscal molecular dynamics simulations to generate inpute files for vertical triplet energies for a selected number of frames.
+Instructions:
 
-1) Install Necessary Dependencies
+1) Files Preparation:
 
+Before intiating the code, the necessary quasiclasical MD trajecotries need to be computed. The code works with any trajectory file, however testing has been mainly performed using the MILO package developed by the Ess group (link) which is interfaced with Guassian16. This workflow can be form of MD simulations such as force fields, semiempirical methods (e.g. GNF2-xTB) and Density Functional Theory (DFT) as well as other methods. Currenly benchmaking has only performed usign quasiclassical MD at the M06-2X/MIDI! level of theory which we recommmend for use.
+
+Recommendations based on current available benchmarkig:
+
+```
+Package: MILO
+Level of theory: M06-2X/MIDI! (inclusion of implict solvation is optional)
+No of trajectories: 25
+Trajectory lenght: 1000 fs
+Trajectory timestep: 1 fs
+```
+
+2) Install Necessary Dependencies
 
 ```bash
 $ pip install acme
 ```
+3) Download and excecute jupyter notebook in working directory containing the 
+
+ Following the instruction in the notebook, the necessary QM input files will be generated based on the ACME package. The code has been tested only for Gaussian16, but the ACME package (link) allows for generation of ORCA input files (please see ACME instructions manual). An overview of the necessary steps is described below:
 
 
 
