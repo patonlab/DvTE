@@ -1,6 +1,6 @@
 # Dynamic Vertical Triplet Energies (DvTE) Generation and Processign
 
-DvTE.png
+![Alt Text](./DvTE.png)
 
 [Under Development]
 
