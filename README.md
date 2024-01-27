@@ -33,6 +33,9 @@ No of trajectories: 25
 Trajectory lenght: 1000 fs
 Trajectory timestep: 1 fs
 ```
+
+A set of example trajectory files generated using MILO can be found in the folder /Example_Trajectories
+
 Note: the dynamics should be performed on the ground state surface (i.e. S0, multiplicity = 1)
 
 2) Install Necessary Dependencies
