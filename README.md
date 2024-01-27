@@ -16,7 +16,7 @@ The code is currently designed to work with the Gaussian16 environment with plan
 
 ## Dynamic Vertical Triplet Energy Generation (DvTEGen)
 
-Description: This Jupyter Notebook proceses the inputed quasicaliscal molecular dynamics simulations to generate inpute files for vertical triplet energies for a selected number of frames using the ACME package (link).
+Description: This Jupyter Notebook processes the inputed quasicaliscal molecular dynamics simulations to generate inpute files for vertical triplet energies for a selected number of frames using the ACME package (link).
 
 Instructions:
 
@@ -43,7 +43,7 @@ Note: the dynamics should be performed on the ground state surface (i.e. S0, mul
 ```bash
 $ pip install acme
 ```
-3) Download and open the jupyter notebook in working directory containing the all the trajectory files
+3) Download and open the jupyter notebook in the working directory containing the all the trajectory files
 
 ```bash
 $ jupyter notebook DvTEGen.ipynb
@@ -71,7 +71,42 @@ nprocs=32 #Number of processors (See ACME specifications)
 
 ## Dynamic Vertical Triplet Energy Processor (DvTEProc)
 
-[Description]
+Description: This Jupyter Notebook processes the QM ouput files and perfoms the data analysis to provide a prediction of triplet energy for the given molecular system. The code follows the following steps:
+
+  a) Extract electronic energies from QM files and complies them as a .csv document
+  b) Fit a normal distribution to the compiled data
+  c) Construct cumulative distribution function using the mean and standard deviation of the fitted normal distribution
+  d) Generate graphics and Quartile-Quartile plots to analyse the data
+  c) Provide a prediction of triplet energy based on the selected population cutoff using the CDF
+
+Instructions:
+
+1) File Preparations:
+Ensure that all QM output files are compiled in one foulder for each individual molecule to be analyzed
+
+2) Install Necessary Dependencies
+
+```bash
+$ pip install pandas
+$ pip install numpy
+$ pip install scipy
+$ pip install sklearn
+```
+
+3) Download and open the jupyter notebook
+
+```bash
+$ jupyter notebook DvTEGen.ipynb
+```
+
+4) Execute the contents of the notebook
+  a) Provide the Path(s) and structure name(s) of the files to be analyzed
+  b) Select a population for which a predicted triplet energy will be determined
+
+NOTE: As mentioned prior, this value is empirically determined and currently the value of 0.008 performs best using the M06-2X/6-31G(d)//M06-2X/MIDI! level of theory
+
+5) Congratulations, you now have a prediction for the priplet energy for your chosen system(s)
+
 
 ## Example Workflow
 
