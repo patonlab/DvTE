@@ -25,8 +25,9 @@ The code is currently designed to work with the Gaussian16 environment with plan
 ## Example Workflow
 
 1) Run the necessary quasiclassical molecular dynamics trajectories.
-       Code has been deveoped mainly for use with MILO, however any trajectory file is compatible. Currenetly, MILO and JProgDyn have confirmed to be supported.
-       Recommendations: 25 Trajectories, 1000 fs simulation lenght, 1 fs times step
+
+Code has been deveoped mainly for use with MILO, however any trajectory file is compatible. Currenetly, MILO and JProgDyn have confirmed to be supported.
+Recommendations: 25 Trajectories, 1000 fs simulation lenght, 1 fs times step
    
 3) Generate QM input files using DvTEGen (see above for instructions)
 
