@@ -20,7 +20,7 @@ The code is currently designed to work with the Gaussian16 environment, with pla
 
 ## Dynamic Vertical Triplet Energy Generation (DvTEGen)
 
-Description: This Jupyter Notebook processes the inputted quasiclassical molecular dynamics simulations to generate input files for vertical triplet energy calculations, using a selected number of frames.
+Description: This Jupyter Notebook processes the inputted quasiclassical molecular dynamics simulations to generate input files for vertical triplet energy calculations by interfacing with the AQME workflow (https://github.com/jvalegre/aqme).
 
 Instructions:
 
