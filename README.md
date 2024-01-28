@@ -62,6 +62,7 @@ Current Recommendations:
 step_size = 8 #Step size for trajectory sampling (Default = 8)
 i_step = 1 #First Step in the sampled trajectories (Default = 1)
 f_step = 1000 #Final Step in the sampled trajectories (Default = 1000)
+
 #QM inputs
 qm_input='m062x/6-31G* scf=xqc' #Level of theory for vertical Triplet Enegy calculations
 program='gaussian' #Program used for QM calculations (Options: gaussian and orca)
