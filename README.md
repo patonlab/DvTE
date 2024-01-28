@@ -55,7 +55,7 @@ Note: Ensure that the correct Conda environment with the necessary dependencies 
 
 4) Execute the contents of the notebook.
    
-Note: The code has been tested only for Gaussian16, but the ACME package (link) allows for the generation of ORCA input files (please see the ACME instructions manual). Parameters for the file preparations are set by default based on our recommendations; however, these can be easily changed in the "Define Parameters for QM input file generation" cell. Currently, the triplet energy predictions have been benchmarked for the default settings. Any changes in basis set and functional will require empirical determination of the population cutoff (see DvTEProc for details) for accurate predictions of triplet energies.
+Note: The code has been tested only for Gaussian16, but the AQME package (link) allows for the generation of ORCA input files (please see the ACME instructions manual). Parameters for the file preparations are set by default based on our recommendations; however, these can be easily changed in the "Define Parameters for QM input file generation" cell. Currently, the triplet energy predictions have been benchmarked for the default settings. Any changes in basis set and functional will require empirical determination of the population cutoff (see DvTEProc for details) for accurate predictions of triplet energies.
 
 Current Recommendations:
 ```
@@ -67,8 +67,8 @@ f_step = 1000 #Final Step in the sampled trajectories (Default = 1000)
 #QM inputs
 qm_input='m062x/6-31G* scf=xqc' #Level of theory for vertical Triplet Enegy calculations
 program='gaussian' #Program used for QM calculations (Options: gaussian and orca)
-mem='64GB' #Memory used (See ACME specifications)
-nprocs=32 #Number of processors (See ACME specifications)
+mem='64GB' #Memory used (See AQME specifications)
+nprocs=32 #Number of processors (See AQME specifications)
 ```
 
 5) Congratulations, all your QM input files have been generated and can be submitted for calculations on your HPC resources.
