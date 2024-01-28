@@ -14,11 +14,11 @@ The code is based on two main packages:
 1) Dynamic Vertical Triplet Energy Generation (DvTEGen) which prepares input files for quantum mechanical (QM) calculations from input molecular dynamics (MD) trajectory files
 2) Dynamic Vertical Triplet Energies Processor (DvTEProc) which analyses the output QM files to provide a prediction of molecular triplet energies.
 
-The code is currently designed to work with the Gaussian16 environment with plans for integration with other QM packages such as ORCA and QChem. Currently the user is require to provide dynamic trajectories and execute separately the QM calculations, however future plans include development of a complete automated workflow for the UNIX environment.
+The code is currently designed to work with the Gaussian16 environment with plans for integration with other QM packages such as ORCA and QChem. Currently the user is required to provide dynamic trajectories and execute separately the QM calculations, however future plans include development of a complete automated workflow for the UNIX environment.
 
 ## Dynamic Vertical Triplet Energy Generation (DvTEGen)
 
-Description: This Jupyter Notebook processes the inputed quasicaliscal molecular dynamics simulations to generate inpute files for vertical triplet energies calculations, using a selected number of frames.
+Description: This Jupyter Notebook processes the inputed quasiclassical molecular dynamics simulations to generate inpute files for vertical triplet energies calculations, using a selected number of frames.
 
 Instructions:
 
