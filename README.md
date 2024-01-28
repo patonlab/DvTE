@@ -1,7 +1,7 @@
 # Dynamic Vertical Triplet Energies (DvTE) Generation and Processing
 
 <div align="center">
-  <img src="./DvTE.png" alt="Description" width="600">
+  <img src="./DvTE.png" alt="Description" width="800">
 </div>
 
 [Under Development]
