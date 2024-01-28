@@ -8,25 +8,26 @@
 
 ## Synopsis:
 
-Workflow and protocol for recording dynamic vertical triplet energies (DvTEs) based on the following pre-print (Link).
+Workflow and protocol for recording dynamic vertical triplet energies (DvTEs) based on the following preprint (Link).
 
-The code is based on two main packages: 
-1) Dynamic Vertical Triplet Energy Generation (DvTEGen) which prepares input files for quantum mechanical (QM) calculations from input molecular dynamics (MD) trajectory files
-2) Dynamic Vertical Triplet Energies Processor (DvTEProc) which analyses the output QM files to provide a prediction of molecular triplet energies.
+The code is based on two main packages:
 
-The code is currently designed to work with the Gaussian16 environment with plans for integration with other QM packages such as ORCA and QChem. Currently the user is required to provide dynamic trajectories and execute separately the QM calculations, however future plans include development of a complete automated workflow for the UNIX environment.
+Dynamic Vertical Triplet Energy Generation (DvTEGen) which prepares input files for quantum mechanical (QM) calculations from input molecular dynamics (MD) trajectory files.
+
+Dynamic Vertical Triplet Energy Processor (DvTEProc) which analyses the output QM files to provide predictions of molecular triplet energies.
+
+The code is currently designed to work with the Gaussian16 environment, with plans for integration with other QM packages such as ORCA and QChem. Currently, the user is required to provide dynamic trajectories and execute the QM calculations separately; however, future plans include the development of a complete automated workflow for the UNIX environment.
 
 ## Dynamic Vertical Triplet Energy Generation (DvTEGen)
 
-Description: This Jupyter Notebook processes the inputed quasiclassical molecular dynamics simulations to generate inpute files for vertical triplet energies calculations, using a selected number of frames.
+Description: This Jupyter Notebook processes the inputted quasiclassical molecular dynamics simulations to generate input files for vertical triplet energy calculations, using a selected number of frames.
 
 Instructions:
 
 1) Files Preparation:
+Before initiating the code, the necessary quasiclassical MD trajectories need to be computed. The code works with any trajectory file, however, testing has been primarily performed using the MILO package developed by the Ess group (link) which is interfaced with Gaussian16. This workflow can be in the form of MD simulations such as force fields, semiempirical methods (e.g., GFN2-xTB), and Density Functional Theory (DFT), as well as other methods. Currently, benchmarking has only been performed using quasiclassical MD at the M06-2X/MIDI! level of theory, which we recommend for use.
 
-Before intiating the code, the necessary quasiclasical MD trajecotries need to be computed. The code works with any trajectory file, however testing has been mainly performed using the MILO package developed by the Ess group (link) which is interfaced with Guassian16. This workflow can be form of MD simulations such as force fields, semiempirical methods (e.g. GNF2-xTB) and Density Functional Theory (DFT) as well as other methods. Currenly benchmaking has only performed usign quasiclassical MD at the M06-2X/MIDI! level of theory which we recommmend for use.
-
-Recommendations based on current available benchmarkig:
+Recommendations based on current available benchmarking:
 
 ```
 Package: MILO
@@ -36,25 +37,25 @@ Trajectory lenght: 1000 fs
 Trajectory timestep: 1 fs
 ```
 
-A set of example trajectory files generated using MILO can be found in the folder /Example_Trajectories
+A set of example trajectory files generated using MILO can be found in the folder /Example_Trajectories.
 
-Note: the dynamics should be performed on the ground state surface (i.e. S0, multiplicity = 1)
+Note: The dynamics should be performed on the ground state surface (i.e., S0, multiplicity = 1).
 
 2) Install Necessary Dependencies
 
 ```bash
 $ pip install acme
 ```
-3) Download and open the jupyter notebook in the working directory containing all the trajectory files
+3) Download and open the Jupyter notebook in the working directory containing all the trajectory files.
 
 ```bash
 $ jupyter notebook DvTEGen.ipynb
 ```
-Note: Ensure that the correct Conda environment with the necessary dependencies is opened prior to executing the notebook
+Note: Ensure that the correct Conda environment with the necessary dependencies is activated prior to executing the notebook.
 
-4) Execute the contents of the notebook
-
-Note: The code has been tested only for Gaussian16, but the ACME package (link) allows for generation of ORCA input files (please see ACME instructions manual). Parameter for the file preparations are set by default based on our recommendations, however these can be easily changed in the "Define Parameters for QM input file generation" cell. Currently, the triplet energy predictions has been benchmarked for the default desttings. Any changes in basis set and functional will require empirical determination of the population cutoff (see DcTEProc for details) for accurate predictions of triplet energies.
+4) Execute the contents of the notebook.
+   
+Note: The code has been tested only for Gaussian16, but the ACME package (link) allows for the generation of ORCA input files (please see the ACME instructions manual). Parameters for the file preparations are set by default based on our recommendations; however, these can be easily changed in the "Define Parameters for QM input file generation" cell. Currently, the triplet energy predictions have been benchmarked for the default settings. Any changes in basis set and functional will require empirical determination of the population cutoff (see DvTEProc for details) for accurate predictions of triplet energies.
 
 Current Recommendations:
 ```
@@ -70,7 +71,7 @@ mem='64GB' #Memory used (See ACME specifications)
 nprocs=32 #Number of processors (See ACME specifications)
 ```
 
-5) Congratulations, all your QM input files have been generated and can be submitted for calculations on your HPC resources
+5) Congratulations, all your QM input files have been generated and can be submitted for calculations on your HPC resources.
 
 ## Dynamic Vertical Triplet Energy Processor (DvTEProc)
 
