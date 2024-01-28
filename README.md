@@ -45,12 +45,12 @@ Note: the dynamics should be performed on the ground state surface (i.e. S0, mul
 ```bash
 $ pip install acme
 ```
-3) Download and open the jupyter notebook in the working directory containing the all the trajectory files
+3) Download and open the jupyter notebook in the working directory containing all the trajectory files
 
 ```bash
 $ jupyter notebook DvTEGen.ipynb
 ```
-Note: Ensure that the corect Conda environment with the necessary dependencies is opened before the notebook is opened
+Note: Ensure that the correct Conda environment with the necessary dependencies is opened prior to executing the notebook
 
 4) Execute the contents of the notebook
 
@@ -101,7 +101,7 @@ $ pip install sklearn
 ```bash
 $ jupyter notebook DvTEGen.ipynb
 ```
-Note: Ensure that the corect Conda environment with the necessary dependencies is opened before the notebook is opened
+Note: Ensure that the correct Conda environment with the necessary dependencies is opened prior to executing the notebook
 
 4) Execute the contents of the notebook
   a) Provide the Path(s) and structure name(s) of the files to be analyzed
