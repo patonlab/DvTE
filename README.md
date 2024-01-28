@@ -129,6 +129,10 @@ The compiled DvTEs dataset of 20 molecules repoted in the preprint (link) at the
 This set can be utilised to bechmark other level of theory and different flavours of MD simulations (e.g. force fields, semi-empirical, ML-potentials) for the determination of the population cutoff. If you have benchmarking with any addiional level of theory, please reach out and we will include it in the list below.
 
 Currently available benchmarking data:
+```
+M06-2X/6-31(G)//M06-2X/MIDI! - (quasiclassical MD) : population = 0.008
+```
 
-    M06-2X/6-31(G)//M06-2X/MIDI! - (quasiclassical MD) : population = 0.008
+## References:
+TBA
 
