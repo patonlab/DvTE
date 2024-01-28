@@ -131,7 +131,7 @@ This set can be utilised to bechmark other level of theory and different flavour
 
 Currently available benchmarking data:
 ```
-M06-2X/6-31(G)//M06-2X/MIDI! - (quasiclassical MD) : population = 0.008
+M06-2X/6-31G(d)//M06-2X/MIDI! - (quasiclassical MD) : population = 0.008
 ```
 
 ## References:
