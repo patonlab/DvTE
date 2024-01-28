@@ -75,18 +75,19 @@ nprocs=32 #Number of processors (See ACME specifications)
 
 ## Dynamic Vertical Triplet Energy Processor (DvTEProc)
 
-Description: This Jupyter Notebook processes the QM ouput files and perfoms the data analysis to provide a prediction of triplet energy for the given molecular system. The code follows the following steps:
+Description: This Jupyter Notebook processes the QM output files and performs the data analysis to provide a prediction of triplet energy for the given molecular system. The code follows the following steps:
 
-  a) Extract electronic energies from QM files and complies them as a .csv document
-  b) Fit a normal distribution to the compiled data
-  c) Construct cumulative distribution function using the mean and standard deviation of the fitted normal distribution
-  d) Generate graphics and Quartile-Quartile plots to analyse the data
-  c) Provide a prediction of triplet energy based on the selected population cutoff using the CDF
+  a) Extract electronic energies from QM files and compile them as a .csv document.
+  b) Fit a normal distribution to the compiled data.
+  c) Construct a cumulative distribution function using the mean and standard deviation of the fitted normal distribution.
+  d) Generate graphics and Quartile-Quartile plots to analyze the data.
+  e) Provide a prediction of triplet energy based on the selected population cutoff using the CDF.
 
 Instructions:
 
 1) File Preparations:
-Ensure that all QM output files are compiled in one foulder for each individual molecule to be analyzed
+
+Ensure that all QM output files are compiled in one folder for each individual molecule to be analyzed.
 
 2) Install Necessary Dependencies
 
@@ -102,15 +103,16 @@ $ pip install sklearn
 ```bash
 $ jupyter notebook DvTEGen.ipynb
 ```
-Note: Ensure that the correct Conda environment with the necessary dependencies is opened prior to executing the notebook
+Note: Ensure that the correct Conda environment with the necessary dependencies is activated prior to executing the notebook.
 
-4) Execute the contents of the notebook
-  a) Provide the Path(s) and structure name(s) of the files to be analyzed
-  b) Select a population for which a predicted triplet energy will be determined
+4) Execute the contents of the notebook.
+   
+  a) Provide the Path(s) and structure name(s) of the files to be analyzed.
+  b) Select a population for which a predicted triplet energy will be determined.
 
-NOTE: As mentioned prior, this value is empirically determined and currently the value of 0.008 performs best using the M06-2X/6-31G(d)//M06-2X/MIDI! level of theory
+NOTE: As mentioned previously, this value is empirically determined and currently, the value of 0.008 performs best using the M06-2X/6-31G(d)//M06-2X/MIDI! level of theory.
 
-5) Congratulations, you now have a prediction for the priplet energy for your chosen system(s)
+5) Congratulations, you now have a prediction for the triplet energy for your chosen system(s).
 
 
 ## Example Workflow
