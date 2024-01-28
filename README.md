@@ -25,7 +25,7 @@ Description: This Jupyter Notebook processes the inputted quasiclassical molecul
 Instructions:
 
 1) Files Preparation:
-Before initiating the code, the necessary quasiclassical MD trajectories need to be computed. The code works with any trajectory file, however, testing has been primarily performed using the MILO package developed by the Ess group (link) which is interfaced with Gaussian16. This workflow can be in the form of MD simulations such as force fields, semiempirical methods (e.g., GFN2-xTB), and Density Functional Theory (DFT), as well as other methods. Currently, benchmarking has only been performed using quasiclassical MD at the M06-2X/MIDI! level of theory, which we recommend for use.
+Before initiating the code, the necessary quasiclassical MD trajectories need to be computed. The code works with any trajectory file, however, testing has been primarily performed using the MILO package developed by the Ess group (https://github.com/DanielEss-lab/milo) which is interfaced with Gaussian16. This workflow can be in the form of MD simulations such as force fields, semiempirical methods (e.g., GFN2-xTB), and Density Functional Theory (DFT), as well as other methods. Currently, benchmarking has only been performed using quasiclassical MD at the M06-2X/MIDI! level of theory, which we recommend for use.
 
 Recommendations based on current available benchmarking:
 
