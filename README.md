@@ -118,19 +118,15 @@ NOTE: As mentioned previously, this value is empirically determined and currentl
 ## Example Workflow
 
 1) Run the necessary quasiclassical molecular dynamics trajectories.
+2) Generate QM input files using DvTEGen (see above for instructions).
+3) Execute QM calculations on your local HPC resources.
+4) Analyze the data using DvTEProc (see above for instructions) for triplet energy prediction and other visualizations.
    
-3) Generate QM input files using DvTEGen (see above for instructions)
-
-5) Execute QM calculations on your local HPC resources
-
-6) Analyse the data using DvTEProc (see bove for instructions) for triplet energy prediction and other visualizations
-
-
 ## (Re)Benchmarking set
 
-The compiled DvTEs dataset of 20 molecules repoted in the preprint (link) at the M06-2X/6-31G(d)//M06-2X/MIDI! is available in the /Benchmark folder together with an additional notebook called Dynamic Vertical Triplet Energy Benchmarking (DvTEBench). This code utilises the compiled .csv dataset of vertical triplet energies generated using DvTEProc (i.e. {MoleculeName}_output.csv) and collects predicted triplet energies using a range of populations starting from 0.001 to 0.050 in steps of 0.001. The code then compare diffrent models against experimentally determined triplet energy values and reports the best population to be used for future predictions. Aditionally, the code can also compare the performance of Guassian Mixture Models (GMMs) instead of simple normal distributions
+The compiled DvTEs dataset of 20 molecules reported in the preprint (link) at the M06-2X/6-31G(d)//M06-2X/MIDI! is available in the /Benchmark folder, together with an additional notebook called Dynamic Vertical Triplet Energy Benchmarking (DvTEBench). This code utilizes the compiled .csv dataset of vertical triplet energies generated using DvTEProc (i.e., {MoleculeName}_output.csv) and calculates predicted triplet energies using a range of populations starting from 0.001 to 0.050 in steps of 0.001. The code then compares different models against experimentally determined triplet energy values and reports the best population to be used for future predictions. Additionally, the code can also compare the performance of Gaussian Mixture Models (GMMs) instead of simple normal distributions.
 
-This set can be utilised to benchmark other levels of theory and different flavours of MD simulations (e.g. force fields, semi-empirical, ML-potentials) for the determination of the population cutoff. If you have benchmarking data with any addiional level of theory, please reach out and we will include it in the list below.
+This set can be utilized to benchmark other levels of theory and different flavors of MD simulations (e.g., force fields, semi-empirical, ML-potentials) for the determination of the population cutoff. If you have benchmarking data with any additional level of theory, please reach out and we will include it in the list below.
 
 Currently available benchmarking data:
 ```
