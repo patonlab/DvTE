@@ -44,7 +44,7 @@ Note: The dynamics should be performed on the ground state surface (i.e., S0, mu
 2) Install Necessary Dependencies
 
 ```bash
-$ pip install acme
+$ pip install aqme
 ```
 3) Download and open the Jupyter notebook in the working directory containing all the trajectory files.
 
