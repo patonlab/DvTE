@@ -4,11 +4,9 @@
   <img src="./DvTE.png" alt="Description" width="800">
 </div>
 
-[Under Development]
-
 ## Synopsis:
 
-Workflow and protocol for recording dynamic vertical triplet energies (DvTEs) based on the following preprint (Link).
+Workflow and protocol for recording dynamic vertical triplet energies (DvTEs) based on the following publication (Link).
 
 The code is based on two main packages:
 
