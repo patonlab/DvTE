@@ -4,11 +4,9 @@
   <img src="./DvTE.png" alt="Description" width="800">
 </div>
 
-[Under Development]
-
 ## Synopsis:
 
-Workflow and protocol for recording dynamic vertical triplet energies (DvTEs) based on the following preprint (Link).
+Workflow and protocol for recording dynamic vertical triplet energies (DvTEs) based on the following pre-print (https://chemrxiv.org/engage/chemrxiv/article-details/661b148321291e5d1dc940f6).
 
 The code is based on two main packages:
 
@@ -31,9 +29,9 @@ Recommendations based on current available benchmarking:
 
 ```
 Package: MILO
-Level of theory: M06-2X/MIDI! (inclusion of implict solvation is optional)
-No of trajectories: 25
-Trajectory lenght: 1000 fs
+Level of theory: M06-2X/MIDI! (inclusion of implicit solvation is optional)
+No of trajectories: 50
+Trajectory lenght: 500 fs
 Trajectory timestep: 1 fs
 ```
 
@@ -44,7 +42,7 @@ Note: The dynamics should be performed on the ground state surface (i.e., S0, mu
 2) Install Necessary Dependencies
 
 ```bash
-$ pip install acme
+$ pip install aqme
 ```
 3) Download and open the Jupyter notebook in the working directory containing all the trajectory files.
 
@@ -62,10 +60,10 @@ Current Recommendations:
 #Step Number for Coordinate Extraction
 step_size = 8 #Step size for trajectory sampling (Default = 8)
 i_step = 1 #First Step in the sampled trajectories (Default = 1)
-f_step = 1000 #Final Step in the sampled trajectories (Default = 1000)
+f_step = 500 #Final Step in the sampled trajectories (Default = 500)
 
 #QM inputs
-qm_input='m062x/6-31G* scf=xqc' #Level of theory for vertical Triplet Enegy calculations
+qm_input='m062x/6-31G* scf=xqc' #Level of theory for vertical Triplet Energy calculations
 program='gaussian' #Program used for QM calculations (Options: gaussian and orca)
 mem='64GB' #Memory used (See AQME specifications)
 nprocs=32 #Number of processors (See AQME specifications)
@@ -124,15 +122,15 @@ NOTE: As mentioned previously, this value is empirically determined and currentl
    
 ## (Re)Benchmarking set
 
-The compiled DvTEs dataset of 20 molecules reported in the preprint (link) at the M06-2X/6-31G(d)//M06-2X/MIDI! is available in the /Benchmark folder, together with an additional notebook called Dynamic Vertical Triplet Energy Benchmarking (DvTEBench). This code utilizes the compiled .csv dataset of vertical triplet energies generated using DvTEProc (i.e., {MoleculeName}_output.csv) and calculates predicted triplet energies using a range of populations starting from 0.001 to 0.050 in steps of 0.001. The code then compares different models against experimentally determined triplet energy values and reports the best population to be used for future predictions. Additionally, the code can also compare the performance of Gaussian Mixture Models (GMMs) instead of simple normal distributions.
+The compiled DvTEs dataset of 25 molecules reported in the paper (link) at the M06-2X/6-31G(d)//M06-2X/MIDI! is available in the /Benchmark folder, together with an additional notebook called Dynamic Vertical Triplet Energy Benchmarking (DvTEBench). This code utilizes the compiled .csv dataset of vertical triplet energies generated using DvTEProc (i.e., {MoleculeName}_output.csv) and calculates predicted triplet energies using a range of populations starting from 0.001 to 0.050 in steps of 0.001. The code then compares different models against experimentally determined triplet energy values and reports the best population to be used for future predictions. Additionally, the code can also compare the performance of Gaussian Mixture Models (GMMs) instead of simple normal distributions.
 
 This set can be utilized to benchmark other levels of theory and different flavors of MD simulations (e.g., force fields, semi-empirical, ML-potentials) for the determination of the population cutoff. If you have benchmarking data with any additional level of theory, please reach out and we will include it in the list below.
 
 Currently available benchmarking data:
 ```
-M06-2X/6-31G(d)//M06-2X/MIDI! - (quasiclassical MD) : population = 0.008
+M06-2X/6-31G(d)//M06-2X/MIDI! - (quasiclassical MD - MILO) : population = 0.008
 ```
 
 ## References:
-TBA
+https://chemrxiv.org/engage/chemrxiv/article-details/661b148321291e5d1dc940f6
 
