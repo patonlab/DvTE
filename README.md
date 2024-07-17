@@ -4,6 +4,8 @@
   <img src="./DvTE.png" alt="Description" width="800">
 </div>
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.12762637.svg)](https://doi.org/10.5281/zenodo.12762637)
+
 ## Synopsis:
 
 Workflow and protocol for recording dynamic vertical triplet energies (DvTEs) based on the following pre-print (https://chemrxiv.org/engage/chemrxiv/article-details/661b148321291e5d1dc940f6).
