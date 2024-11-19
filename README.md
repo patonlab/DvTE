@@ -8,7 +8,7 @@
 
 ## Synopsis:
 
-Workflow and protocol for recording dynamic vertical triplet energies (DvTEs) based on the following pre-print (https://chemrxiv.org/engage/chemrxiv/article-details/661b148321291e5d1dc940f6).
+Workflow and protocol for recording dynamic vertical triplet energies (DvTEs) based on the following article: Chem 2024, 10, 3428-3443 (https://www.sciencedirect.com/science/article/abs/pii/S2451929424003395).
 
 The code is based on two main packages:
 
@@ -134,5 +134,5 @@ M06-2X/6-31G(d)//M06-2X/MIDI! - (quasiclassical MD - MILO) : population = 0.008
 ```
 
 ## References:
-https://chemrxiv.org/engage/chemrxiv/article-details/661b148321291e5d1dc940f6
+M. V. Popescu, R. S. Paton, Chem 2024, 10, 3428-3443.
 
